@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Axl Hanuebi - Portofolio",
-  description:"Portfolio of Axl Hanuebi, a Software Developer specializing in full-stack web, mobile applications, and intelligent system integrations.",
+  description: "Portfolio of Axl Hanuebi, a Software Developer specializing in full-stack web, mobile applications, and intelligent system integrations.",
 };
 
 export default function RootLayout({
@@ -26,13 +26,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Navbar/>
-          <main className="min-h-screen p-8 sm:p-20 max-w-5xl mx-auto font-[family-name:var(--font-geist-sans)]">
-            {children}
-          </main>
+      <body className={`${geistSans.className} bg-background text-foreground`}>
+        <Navbar />
+        <main className="min-h-screen pt-24 pb-8 px-6 sm:px-20 max-w-5xl mx-auto">
+          {children}
+        </main>
       </body>
     </html>
   );

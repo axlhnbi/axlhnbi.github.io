@@ -4,7 +4,7 @@ import Button from '../ui/Button';
 
 export default function Navbar(){
     return(
-        <header className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-gray-800">
+        <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b bg-primary border-secondary">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center mr-8">

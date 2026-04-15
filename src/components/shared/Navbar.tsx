@@ -12,7 +12,7 @@ export default function Navbar(){
     const closeMenu = () => setIsOpen(false);
 
     return(
-        <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b bg-primary border-secondary">
+        <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b bg-background border-secondary">
             <div className="md:hidden flex px-4 py-4 items-center relative">
                 <button
                     className="text-gray-300 hover:text-white focus:outline-none"
@@ -30,9 +30,6 @@ export default function Navbar(){
                     )}
 
                 </button>
-                <Link href="/" className="absolute left-0 right-0 text-center font-bold text-white pointer-events-none">
-                   <span className="pointer-events-auto">Portofolio Axl Hanuebi</span>
-                </Link>
             </div>
             <div className="hidden md:flex container mx-auto px-6 py-4 justify-between items-center">
                 <div className="flex items-center">
@@ -55,23 +52,19 @@ export default function Navbar(){
                 </div>
                 <div className="hidden md:block">
                     <Link href="#contact">
-                        <Button>Contact Me</Button>
+                        <Button variant="outline" size="sm">Contact Me</Button>
                     </Link>
                 </div>
             </div>
 
             {isOpen && (
-                <div className="md:hidden bg-primary border-b border-secondary">
+                <div className="md:hidden bg-background border-b border-secondary">
                     <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-gray-100">
                         <Link href="/" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Home</Link>
                         <Link href="#projects" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Projects</Link>
                         <Link href="#about" onClick={closeMenu} className="hover:text-gray-600 transition-colors">About Me</Link>
                         <Link href="#blog" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Blog</Link>
                         <Link href="#youtube" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Youtube</Link>
-
-                        <Link href="#contact" onClick={closeMenu} className="pt-4 border-t border-secondary block">
-                            <Button className="w-full">Contact Me</Button>
-                        </Link>
                     </nav>
                 </div>
             )}

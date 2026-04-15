@@ -2,16 +2,16 @@
 
 
 :root {
-  --background: #ffffff; 
-  --foreground: #ffffff; 
+  --background: #0e0e10; 
+  --foreground: #f3f4f6; 
 
-  --primary: #0e0e10;
-  --primary-hover: #0e0e10;
-  --primary-foreground: #ffffff;
+  --primary: #ff4000; 
+  --primary-hover: #f07b54; 
+  --primary-foreground: #ffffff; 
 
-  --secondary: #ff4000;
-  --secondary-hover: #ff7340;
-  --secondary-foreground: #ffffff;
+  --secondary: #1f2937; 
+  --secondary-hover: #374151; 
+  --secondary-foreground: #f3f4f6; 
 
   --danger: #ef4444;
   --danger-foreground: #ffffff;
@@ -32,7 +32,6 @@
   --color-danger: var(--danger);
   --color-danger-foreground: var(--danger-foreground);
 
-  /* Font bawaan Next.js */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

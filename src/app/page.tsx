@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import ProjectCard from "@/components/shared/ProjectCard";
 
 export default function Home() {
   return (
@@ -42,6 +43,34 @@ export default function Home() {
           <span className="hover:text-primary transition-colors cursor-default">CSS</span>
           <span className="hover:text-primary transition-colors cursor-default">JS</span>
           <span className="hover:text-primary transition-colors cursor-default">SQL</span>
+        </div>
+      </section>
+
+      <section className="w-full max-w-6xl mx-auto px-4 py-24 sm:py-32 flex flex-col gap-16">
+        <div className="flex flex-col gap-2">
+          <p className="text-primary font-mono text-sm uppercase tracking-widest">
+            &gt; Portofolio
+          </p>
+          <h2 className="text-4xl sm:text-5xl">
+            Featured Projects.
+          </h2>
+        </div>
+        <div className="flex flex-col gap-12 sm:gap-24">
+          <ProjectCard 
+            title="FinFlow"
+            description="Aplikasi pelacakan pengeluaran finansial lintas platform yang dirancang untuk performa tinggi dan pengalaman pengguna yang mulus. Dilengkapi dengan arsitektur data terstruktur dan antarmuka modern yang siap diluncurkan ke tahap produksi."
+            techStack={["Ionic", "Angular", "Tailwind CSS", "Supabase"]}
+            liveUrl="#"
+            githubUrl="#"
+          />
+
+          <ProjectCard 
+            title="Automated Face Recognition Lock"
+            description="Sistem keamanan perangkat keras pintar yang memanfaatkan computer vision untuk autentikasi biometrik. Memproses data visual secara real-time untuk mengontrol akses fisik dengan tingkat akurasi tinggi."
+            techStack={["Python", "OpenCV", "Raspberry Pi"]}
+            liveUrl="#"
+            githubUrl="#"
+          />
         </div>
       </section>
     </main>

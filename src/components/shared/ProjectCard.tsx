@@ -21,7 +21,7 @@ export default function ProjectCard({
     githubUrl,
     liveUrl
 }: ProjectCardProps){
-    const fallbackImage = "/images/no-image.png";
+    const fallbackImage = "/images/no-image.svg";
     const [imgSrc, setImgSrc] = useState(imageUrl || fallbackImage);
     return(
         <div className="group flex flex-col md:flex-row gap-8 items-center bg-gray-900/20 border border-gray-800/60 rounded-2xl p-4 sm:p-6 transition-all hover:border-gray-700">
@@ -31,6 +31,8 @@ export default function ProjectCard({
                     alt={`Screenshot of ${title}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    placeholder="blur"
+                    blurDataURL="/images/no-image.svg"
                     onError={() => setImgSrc(fallbackImage)}
                     className="object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
                 />

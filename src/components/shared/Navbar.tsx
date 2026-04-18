@@ -45,9 +45,7 @@ export default function Navbar(){
                     <nav className="space-x-8 text-sm font-medium text-gray-300">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <Link href="#projects" className="hover:text-white transition-colors">Projects</Link>
-                        <Link href="#about" className="hover:text-white transition-colors">About Me</Link>
-                        <Link href="#blog" className="hover:text-white transition-colors">Blog</Link>
-                        <Link href="#youtube" className="hover:text-white transition-colors">Youtube</Link>
+                        <Link href="#experience" className="hover:text-white transition-colors">Experience</Link>
                     </nav>
                 </div>
                 <div className="hidden md:block">
@@ -62,9 +60,7 @@ export default function Navbar(){
                     <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-gray-100">
                         <Link href="/" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Home</Link>
                         <Link href="#projects" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Projects</Link>
-                        <Link href="#about" onClick={closeMenu} className="hover:text-gray-600 transition-colors">About Me</Link>
-                        <Link href="#blog" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Blog</Link>
-                        <Link href="#youtube" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Youtube</Link>
+                        <Link href="#experience" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Experience</Link>
                     </nav>
                 </div>
             )}

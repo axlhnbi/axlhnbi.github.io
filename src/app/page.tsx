@@ -2,6 +2,7 @@ import Hero from "@/components/sections/Hero";
 import TechStack from "@/components/sections/TechStack";
 import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import Experience from "@/components/sections/Experience";
+import Contact from "@/components/sections/Contact";
 import ActiveSectionObserver from "@/components/shared/ActiveSectionObserver";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <TechStack />
       <FeaturedProjects />
       <Experience />
+      <Contact />
     </main>
   );
 }

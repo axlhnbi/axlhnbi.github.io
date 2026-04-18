@@ -24,9 +24,9 @@ export default function Hero() {
             <Link href="#projects" className="w-full sm:w-auto">
                 <Button size="lg" variant="primary" className="w-full">Explore My Work</Button>
             </Link>
-            <Button size="lg" variant="outline">
-                Contact Me
-            </Button>
+            <Link href="#contact" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full">Contact Me</Button>
+            </Link>
             </div>
         </section>
     )

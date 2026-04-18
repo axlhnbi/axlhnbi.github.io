@@ -39,7 +39,7 @@ export default function Navbar(){
                             alt="logo"
                             width={40}
                             height={40}
-                            className="object-contain"
+                            className="object-contain w-15 h-auto"
                         />
                     </Link>
                     <nav className="space-x-8 text-sm font-medium text-gray-300">

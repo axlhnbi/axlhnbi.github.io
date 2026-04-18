@@ -2,7 +2,7 @@ import { TECHSTACKS } from "@/data/techstacks";
 
 export default function TechStack() {
     return (
-        <section className="w-full border-y border-gray-800/60 py-8 bg-background/50 backdrop-blur-sm">
+        <section id="techstack" className="w-full border-y border-gray-800/60 py-8 bg-background/50 backdrop-blur-sm">
             <p className="text-center font-mono text-gray-600 uppercase tracking-[0.3em] mb-3">
                 Technologies & Tools
             </p>

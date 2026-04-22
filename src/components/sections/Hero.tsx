@@ -9,15 +9,15 @@ export default function Hero() {
             &gt; Hello World, I'm
             </p>
 
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground mb-4">
+            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tighter text-foreground dark:text-foreground-dark mb-4">
             {HERO.name}
             </h1>
             
             <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-500 mb-8">
             {HERO.tagline}
             </h2>
-            <h3 className="text-gray-50 sm:text-xl max-w-2xl leading-relaxed text-lg mb-2">{HERO.subTagline}</h3>
-            <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mb-12 leading-relaxed">
+            <h3 className="text-foreground dark:text-gray-50 font-bold sm:text-xl max-w-2xl leading-relaxed text-lg mb-2">{HERO.subTagline}</h3>
+            <p className="text-foreground dark:text-gray-400 text-lg sm:text-xl max-w-2xl mb-12 leading-relaxed">
             {HERO.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

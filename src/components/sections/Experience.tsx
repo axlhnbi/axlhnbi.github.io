@@ -20,7 +20,7 @@ export default function Experience() {
                 <p className="text-primary font-mono text-sm uppercase tracking-widest">
                 &gt; Experience
                 </p>
-                <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
+                <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground dark:text-foreground-dark">
                 Professional Journey.
                 </h2>
             </div>
@@ -29,14 +29,14 @@ export default function Experience() {
                 {EXPERIENCES.map((exp, index) => (
                 <div 
                     key={index}
-                    className="bg-gray-900/20 border border-gray-800/60 rounded-2xl p-6 sm:p-10 transition-all hover:bg-gray-900/40 hover:border-gray-700"
+                    className="dark:bg-gray-900/20 border border-gray-800/60 rounded-2xl p-6 sm:p-10 transition-all dark:hover:bg-gray-900/40 hover:border-gray-700"
                 >
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 border-b border-gray-800/60 pb-8">
                     <div>
-                        <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-foreground dark:text-foreground-dark">
                         {exp.role}
                         </h3>
-                        <p className="text-xl text-gray-400 mt-2 font-medium">
+                        <p className="text-xl text-foregroun dark:text-gray-400 mt-2 font-medium">
                         {exp.company}
                         </p>
                         {exp.companyUrl && 
@@ -44,7 +44,7 @@ export default function Experience() {
                                 href={exp.companyUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-colors font-mono"
+                                className="inline-flex items-center gap-2 text-sm text-foreground dark:text-gray-500 hover:text-primary transition-colors font-mono"
                             >
                                 <Globe className="w-4 h-4" strokeWidth={1.5} />
                                 {exp.companyUrl}
@@ -59,7 +59,7 @@ export default function Experience() {
                     </div>
                     </div>
 
-                    <ul className="space-y-6 text-gray-400 text-base sm:text-lg leading-relaxed">
+                    <ul className="space-y-6 text-foreground dark:text-gray-400 text-base sm:text-lg leading-relaxed">
                     {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start gap-4">
                         <span className="text-primary mt-1 text-xl">▹</span>

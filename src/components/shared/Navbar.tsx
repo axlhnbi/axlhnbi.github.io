@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '../ui/Button';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function Navbar(){
 
@@ -12,10 +13,10 @@ export default function Navbar(){
     const closeMenu = () => setIsOpen(false);
 
     return(
-        <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b bg-background border-secondary">
+        <header className="fixed top-0 w-full z-50 backdrop-blur-md border-b bg-background dark:bg-background-dark">
             <div className="md:hidden flex px-4 py-4 items-center relative">
                 <button
-                    className="text-gray-300 hover:text-white focus:outline-none"
+                    className="text-foreground hover:text-primary focus:outline-none hover:cursor-pointer dark:text-gray-300"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
@@ -35,17 +36,24 @@ export default function Navbar(){
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center mr-8">
                         <Image
-                            src="/images/logo.svg"
+                            src="/images/logo.png"
                             alt="logo"
-                            width={40}
-                            height={40}
-                            className="object-contain w-15 h-auto"
+                            width={60}
+                            height={60}
+                            className="object-contain w-15 h-auto dark:hidden"
+                        />
+                        <Image
+                            src="/images/logo-dark.png"
+                            alt="logo"
+                            width={60}
+                            height={60}
+                            className="object-contain w-15 h-auto hidden dark:block"
                         />
                     </Link>
-                    <nav className="space-x-8 text-sm font-medium text-gray-300">
-                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
-                        <Link href="#projects" className="hover:text-white transition-colors">Projects</Link>
-                        <Link href="#experience" className="hover:text-white transition-colors">Experience</Link>
+                    <nav className="space-x-8 text-sm font-medium text-foreground dark:text-gray-300">
+                        <Link href="/" className="hover:text-primary hover:border-b transition-colors">Home</Link>
+                        <Link href="#projects" className="hover:text-primary hover:border-b transition-colors">Projects</Link>
+                        <Link href="#experience" className="hover:text-primary hover:border-b transition-colors">Experience</Link>
                     </nav>
                 </div>
                 <div className="hidden md:block">
@@ -56,14 +64,18 @@ export default function Navbar(){
             </div>
 
             {isOpen && (
-                <div className="md:hidden bg-background border-b border-secondary">
-                    <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-gray-100">
-                        <Link href="/" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Home</Link>
-                        <Link href="#projects" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Projects</Link>
-                        <Link href="#experience" onClick={closeMenu} className="hover:text-gray-600 transition-colors">Experience</Link>
+                <div className="md:hidden bg-background dark:bg-background-dark">
+                    <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium text-foreground dark:text-foreground-dark">
+                        <Link href="/" onClick={closeMenu} className="hover:text-primary transition-colors">Home</Link>
+                        <Link href="#projects" onClick={closeMenu} className="hover:text-primary transition-colors">Projects</Link>
+                        <Link href="#experience" onClick={closeMenu} className="hover:text-primary transition-colors">Experience</Link>
+                        <Link href="#contact" onClick={closeMenu} className="hover:text-primary transition-colors">Contact Me</Link>
                     </nav>
                 </div>
             )}
+            <div className="absolute top-3 right-3">
+                <ThemeToggle />
+            </div>
         </header>
     )
 }

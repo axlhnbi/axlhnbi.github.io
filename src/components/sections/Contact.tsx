@@ -19,17 +19,17 @@ export default function Contact() {
   };
 
   return (
-    <footer id="contact" className="w-full border-t border-gray-800/60 bg-black/20 mt-20">
+    <footer id="contact" className="w-full border-t border-gray-800/60 bg-background dark:bg-black/20 mt-20">
       <div className="max-w-6xl mx-auto px-4 py-24">
         
         <div className="flex flex-col items-center text-center gap-8 mb-24">
           <p className="text-primary font-mono text-sm uppercase tracking-widest">
             &gt; What's Next?
           </p>
-          <h2 className="text-5xl sm:text-7xl font-bold tracking-tight text-foreground">
+          <h2 className="text-5xl sm:text-7xl font-bold tracking-tight text-foreground dark:text-foreground-dark">
             Let's Build Something Together.
           </h2>
-          <p className="max-w-xl text-gray-400 text-lg leading-relaxed">
+          <p className="max-w-xl text-foreground dark:text-gray-400 text-lg leading-relaxed">
             I am currently open to new opportunities or simply technical discussions regarding the Ionic and Angular ecosystem.
           </p>
 
@@ -61,10 +61,10 @@ export default function Contact() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-gray-800/40 gap-8">
           <div className="flex flex-col gap-2 items-center md:items-start text-center md:text-left">
-            <p className="text-gray-500 text-sm font-mono">
+            <p className="text-foreground dark:text-gray-500 text-sm font-mono">
               &copy; {currentYear} axlhnbi. All rights reserved.
             </p>
-            <p className="text-gray-600 text-xs font-mono">
+            <p className="text-foreground dark:text-gray-600 text-xs font-mono">
               Engineered with Next.js & Tailwind CSS.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-primary hover:-translate-y-1 transition-all"
+                className="text-foreground dark:text-gray-500 hover:text-primary hover:-translate-y-1 transition-all"
                 aria-label={social.name}
               >
                 <social.icon className="w-6 h-6" strokeWidth={1.5} />

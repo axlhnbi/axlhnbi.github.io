@@ -24,7 +24,7 @@ export default function ProjectCard({
     const fallbackImage = "/images/no-image.svg";
     const [imgSrc, setImgSrc] = useState(imageUrl || fallbackImage);
     return(
-        <div className="group flex flex-col md:flex-row gap-8 items-center bg-gray-900/20 border border-gray-800/60 rounded-2xl p-4 sm:p-6 transition-all hover:border-gray-700">
+        <div className="group flex flex-col md:flex-row gap-8 items-center bg-gray-white dark:bg-gray-900/20 border border-gray-800/60 rounded-2xl p-4 sm:p-6 transition-all hover:border-gray-700">
             <div className="relative w-full md:w-1/2 aspect-video overflow-hidden rounded-xl bg-gray-800">
                 <Image 
                     src={imgSrc}
@@ -38,8 +38,8 @@ export default function ProjectCard({
                 />
             </div>
             <div className="w-full md:w-/2 flex flex-col items-start">
-                <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">{title}</h3>
-                <p className="text-gray-400 leading-relaxed mb-6">
+                <h3 className="text-2xl sm:text-3xl font-bold text-foreground dark:text-foreground-dark mb-3">{title}</h3>
+                <p className="text-foreground dark:text-gray-400 leading-relaxed mb-6">
                     {description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">

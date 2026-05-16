@@ -9,11 +9,11 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
     {
-        title: "FinFlow",
+        title: "RinciUang",
         description: "Available exclusively on Android. A cross-platform financial tracker engineered for speed and a frictionless user experience. It features a robust data architecture and a sleek, modern UI that is fully optimized for production.",
         techStack: ["Ionic", "Angular", "PHP"],
         imageUrl: "https://seashell-gazelle-908805.hostingersite.com/img/finflow-mobile-dashboard.webp", 
-        liveUrl: "#",
+        liveUrl: "https://play.google.com/store/apps/details?id=com.axlhnbi.finflow",
         githubUrl: "https://github.com/axlhnbi/finflow"
     },
     {
